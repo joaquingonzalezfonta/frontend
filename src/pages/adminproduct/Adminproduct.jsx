@@ -42,8 +42,6 @@ export default function Adminproduct() {
             
             const response = await api.get(`/categories`)
 
-            console.log(response.data);
-
             setCategories(response.data.categories)
 
         } catch (error) {
@@ -55,8 +53,7 @@ export default function Adminproduct() {
     async function getProducts() {
         try {
             // const response = await axios.get(`${URL}/products`);
-            const response = await api.get(`/products`)
-            console.log(response) 
+            const response = await api.get(`/products`) 
 
             const { products, total } = response.data;
 
@@ -82,9 +79,7 @@ export default function Adminproduct() {
         }).then(async (result) => {
             try {
                 if (result.isConfirmed) {
-                    const response = await axios.delete(`${URL}/products/${id}`);
-
-                    console.log(response.data)
+                    await axios.delete(`${URL}/products/${id}`);
 
                     getProducts();
                 }
@@ -102,7 +97,6 @@ export default function Adminproduct() {
 
 
     async function onProductSubmit(producto) {
-        console.log(producto)
 
         try {
 
@@ -120,8 +114,8 @@ export default function Adminproduct() {
                 // Hacer un put
                 const { _id } = selectedProduct;
 
-                const response = await axios.put(`${URL}/products/${_id}`, formData)
-                console.log(response.data)
+                await axios.put(`${URL}/products/${_id}`, formData)
+                
 
                 Swal.fire({
                     title: "Actualizacion correcta",
@@ -134,8 +128,8 @@ export default function Adminproduct() {
 
             } else {
                 // si no tengo estado selectedProduct (null) significa que estoy creando un producto
-                const response = await axios.post(`${URL}/products`, formData)
-                console.log(response.data)
+                await axios.post(`${URL}/products`, formData)
+                
 
                 Swal.fire({
                     title: "Producto creado",
@@ -159,7 +153,7 @@ export default function Adminproduct() {
 
     function handleEditProduct(producto) {
 
-        console.log("Producto a editar", producto)
+        
         setSelectedProduct(producto);
     }
 

@@ -1,9 +1,4 @@
 import './Aboutus.css'
-import ImgCamaro from '../../assets/img/img-camaro.jpeg'
-import ImgCanapino from '../../assets/img/img-canapino.jpeg'
-import ImgPerfil from '../../assets/img/img-perfil.jpeg'
-import ImgStc2000 from '../../assets/img/img-stc2000.jpeg'
-import VideoFerrari from '../../assets/videos/video-ferrari.MOV'
 
 export default function Aboutus() {
     return (
@@ -16,10 +11,8 @@ export default function Aboutus() {
                 <div className="contenedor-izquierdo">
                     <div className="contenedor-imagen-perfil">
                         <img
-                            src={ImgPerfil}
-                            alt="perfil"
-                            className="image-perfil"
-                        />
+                            src="/img/img-perfil.jpeg"
+                            alt="perfil" className="image-perfil"/>
                     </div>
                     <div className="contenedor-titulo-parrafo">
                         <h2>ImporCar</h2>
@@ -30,21 +23,9 @@ export default function Aboutus() {
                         </p>
                     </div>
                     <div className="contenedor-imagen-perfil">
-                        <img
-                            src={ImgCanapino}
-                            alt="perfil"
-                            className="image-perfil"
-                        />
-                        <img
-                            src={ImgCamaro}
-                            alt="perfil"
-                            className="image-perfil"
-                        />
-                        <img
-                            src={ImgStc2000}
-                            alt="perfil"
-                            className="image-perfil"
-                        />
+                        <img src='/img/img-canapino.jpeg' alt="canapino" className="image-perfil"/>
+                        <img src="/img/img-camaro.jpeg" alt="Camaro" className="image-perfil"/>
+                        <img src="/img/img-stc2000.jpeg" alt="tc2000" className="image-perfil"/>
                     </div>
                     <div className="contenedor-titulo-parrafo">
                         <h2>Creador</h2>
@@ -60,13 +41,7 @@ export default function Aboutus() {
                     </div>
                 </div>
                 <div className="video-aboutus-auto">
-                    <video
-                        src={VideoFerrari}
-                        controls= {true}
-                        autoPlay= {true}
-                        muted= {true}
-                        loop= {true}
-                    ></video>
+                    <video src="/videos/video-ferrari.mov" controls autoPlay muted loop/>
                 </div>
             </div>
         </>

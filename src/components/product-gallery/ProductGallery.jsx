@@ -40,8 +40,6 @@ export default function ProductGallery() {
 
     }
 
-    console.log(products)
-
     return (
         <section>
             <div className="product-card-container">

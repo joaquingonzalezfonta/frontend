@@ -49,8 +49,6 @@ export default function Adminuser() {
         
         const response = await api.get(`/provinces`)
 
-        console.log(response.data);
-
         setProvinces(response.data.provinces)
 
     } catch (error) {
@@ -63,8 +61,6 @@ async function getBudget() {
   try {
       
       const response = await api.get(`/budget`)
-
-      console.log(response.data);
 
       setBudget(response.data.budget)
 
@@ -83,7 +79,7 @@ async function getBudget() {
           Authorization: token
         }
       });
-      console.log(response.data);
+      
 
       // const { users = [], total = 0 } = response.data || {};
       setUsers(response.data);
@@ -106,13 +102,11 @@ async function getBudget() {
       try {
         if (result.isConfirmed) {
 
-          const response = await axios.delete(`${URL}/users/${id}`, {
+          await axios.delete(`${URL}/users/${id}`, {
             headers: {
               Authorization: token
             }
           });
-
-          console.log(response.data)
 
           getUsers()
         }
@@ -130,7 +124,7 @@ async function getBudget() {
 
 
   async function onUsersSubmit(user) {
-    console.log(user)
+    
 
     try {
 
@@ -151,8 +145,7 @@ async function getBudget() {
 
         const { _id } = selectedUser;
 
-        const response = await axios.put(`${URL}/users/${_id}`, formData, { headers: { authorization: token } })
-        console.log(response.data)
+        await axios.put(`${URL}/users/${_id}`, formData, { headers: { authorization: token } })
 
         Swal.fire({
           title: "Actualización correcta",
@@ -167,9 +160,8 @@ async function getBudget() {
 
       } else {
 
-        const response = await axios.post(`${URL}/users`, formData, { headers: { authorization: token } })
-        console.log(token)
-        console.log(response.data)
+      await axios.post(`${URL}/users`, formData, { headers: { authorization: token } })
+        
 
         Swal.fire({
           title: "Usuario creado",
@@ -194,7 +186,6 @@ async function getBudget() {
 
 
   function handleEditUser(user) {
-    console.log("User a editar", user)
     setSelectedUser(user);
   }
 

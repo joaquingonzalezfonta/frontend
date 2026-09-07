@@ -10,7 +10,7 @@
     align-items: center;
     min-height: 100vh;
 
-    background-image: url("../../assets/img/loginimg.jpeg");
+    background-image: url("/img/loginimg.jpeg");
     background-size: cover;
     background-position: 50% 90%;
 

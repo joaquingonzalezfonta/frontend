@@ -124,7 +124,6 @@ export default function OrderProvider({ children }) {
                 width:'300px'
             })
 
-            console.log()
         } catch (error) {
             console.log(error)
             Swal.fire({
