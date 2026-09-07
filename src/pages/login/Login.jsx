@@ -13,7 +13,7 @@ export default function Login() {
 
   return (
     <>
-      <body className="bodyLogin">
+      <div className="bodyLogin">
 
         <div className="wrapper">
           <form className="formLogin" onSubmit={handleSubmit(login)}>
@@ -55,7 +55,7 @@ export default function Login() {
         </div>
 
 
-      </body>
+      </div>
     </>
 
   );

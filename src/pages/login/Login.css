@@ -9,9 +9,10 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(https://s1.1zoom.me/big0/492/Sunrises_and_sunsets_Porsche_718_Cayman_Side_587708_1280x851.jpg);
+
+    background-image: url("../../assets/img/loginimg.jpeg");
     background-size: cover;
-    background-position: center;
+    background-position: 50% 90%;
 
     .formLogin {
         background: transparent;
@@ -85,7 +86,7 @@
 .remember-forgot a {
     color: #ffffffff;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.6s;
 }
 
 .remember-forgot a:hover {
@@ -105,7 +106,7 @@
     font-size: 16px;
     color: #333;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.6s;
 }
 
 .wrapper .button:hover {
@@ -122,7 +123,7 @@
     color: #ffffffff;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.6s;
 }
 
 .register-link p {

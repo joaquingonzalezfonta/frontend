@@ -18,6 +18,8 @@ export const UserProvider = ({ children }) => {
     const navigate = useNavigate()
 
     async function login(data) {
+        console.log("LOGIN EJECUTADO", data)
+
         try {
 
             const response = await axios.post(`${URL}/login`, data)

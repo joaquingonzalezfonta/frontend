@@ -40,6 +40,7 @@ export default function ProductGallery() {
 
     }
 
+    console.log(products)
 
     return (
         <section>
@@ -53,7 +54,7 @@ export default function ProductGallery() {
             <Pagination total={total} limit={limit} getFn={getProducts}/>
             
             <div className='selectPaginationContainer'>
-                <select className='selectPagination' onChange={(evt) => setLimit(evt.target.value)}>
+                <select className='selectPagination' onChange={(evt) => setLimit(Number(evt.target.value))}>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

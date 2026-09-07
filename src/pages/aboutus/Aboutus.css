@@ -30,7 +30,7 @@
             justify-content: center;
         
             .image-perfil {
-                border: 6px solid #287375;
+                border: 6px solid black;
                 display: flex;
                 width: 200px;
                 height: 300px;

@@ -7,7 +7,7 @@ form {
 
 input, textarea, select {
         padding: 8px 16px;
-        border: 1px solid #287375;
+        border: 1px solid black;
         outline: none;
         font-size: 16px;
         background-color: white;
@@ -17,20 +17,20 @@ input, textarea, select {
         }
 
         &::placeholder {
-            color: #287375;
+            color: black;
         }
     }
     
     input[type="radio"] {
     width: 16px;
     height: 16px;
-    accent-color: #287375;
+    accent-color: black;
 }
 
 input[type="range"], input[type="file"] {
-        accent-color: #287375;
+        accent-color: black;
     }
 
 input[type="file"] {
-    background-color: #287375;
+    background-color: black;
 }

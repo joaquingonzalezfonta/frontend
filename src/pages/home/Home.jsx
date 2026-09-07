@@ -10,43 +10,6 @@ import ProductGallery from "../../components/product-gallery/ProductGallery"
 export default function Home() {
   return (
     <>
-
-      <div
-        id="carouselExampleInterval"
-        className="carousel slide main-carousel"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval={3000}>
-            <img src="https://cdn.whichcar.com.au/assets/w_4096/1d031226/aston-martin-db12-volante-1.jpg" className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item" data-bs-interval={3000}>
-            <img src="https://motor.elpais.com/wp-content/uploads/2022/08/Audi-R8_Coupe-2019-1600-01.jpg" className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item" data-bs-interval={3000}>
-            <img src="https://www.clarin.com/2024/05/03/BBRlsddsh_2000x1500__1.jpg" className="d-block w-100" alt="..." />
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleInterval"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleInterval"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
-
       <section className="product-section">
         <h1 className="section-title"> IMPORCAR </h1>
         <span className="section-subtitle">

@@ -16,7 +16,7 @@
     .modal-content {
         max-height: 500px;
         background-color: white;
-        border: 2px solid cadetblue;
+        border: 2px solid black;
         padding: 1rem;
         color: black;
         border-radius: .25rem;
@@ -68,18 +68,18 @@
 
             .btn-order {
             padding: 3px;
-            background-color: cadetblue;
+            background-color: black;
             color: white;
-            border: 1px solid cadetblue;
+            border: 1px solid black;
             border-radius: 5px;
             margin-left: 5px;
-            transition: 0.3s;
+            transition: 0.6s;
             
 
             &:hover {
                 background-color: white;
-                border: 1px solid cadetblue;
-                color: cadetblue;
+                border: 1px solid black;
+                color: black;
             }
         }
         }

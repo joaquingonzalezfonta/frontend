@@ -30,22 +30,22 @@
     .item-input-dialog {
         width: 8ch;
         height: 34px;
-        border: 1px solid cadetblue;
+        border: 1px solid black;
     }
 
     .item-actions button {
         color: white;
         padding: 4px;
-        background-color: cadetblue;
-        border: 1px solid cadetblue;
+        background-color: black;
+        border: 1px solid black;
         border-radius: 3px;
         cursor: pointer;
-        transition: 0.3s;
+        transition: 0.6s;
 
         &:hover {
             background-color: white;
-            border: 1px solid cadetblue;
-            color: cadetblue;
+            border: 1px solid black;
+            color: black;
         }
     }
 }

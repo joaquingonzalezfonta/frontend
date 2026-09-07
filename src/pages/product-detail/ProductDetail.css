@@ -1,5 +1,5 @@
 .main-details-container {
-    background-color: #287375;
+    background-color: black;
     flex-grow: 1;
     width: 100%;
 
@@ -11,7 +11,7 @@
 
 .contenedor-info-ferrariSf90 {
     display: flex;
-    box-shadow: inset 1px 1px 150px cadetblue;
+    box-shadow: inset 1px 1px 150px black;
     margin: 20px 0;
 
     .car-image {
@@ -74,7 +74,7 @@
     display: flex;
     margin: 5px 0px;
     justify-content: center;
-    box-shadow: inset 1px 1px 15px cadetblue;
+    box-shadow: inset 1px 1px 15px black;
     color: white;
 
     p {
