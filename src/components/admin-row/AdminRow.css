@@ -1,79 +1,179 @@
 .car-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+  width: 100%;
 
-    th {
-        padding: .75rem .5rem;
-        background-color: black;
-        color: white;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  margin-bottom: 20px;
+
+  overflow: hidden;
+
+  background: rgba(15, 15, 18, 0.72);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+
+  th {
+    padding: 0.9rem 0.75rem;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  td,
+  th {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: none;
+  }
+
+  tbody {
+
+    tr {
+      background: rgba(255, 255, 255, 0.015);
+
+      transition: background-color 0.3s ease;
     }
-    
-    td, th {
-        border: 2px solid black;
-        text-align: center;
+
+    tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.035);
     }
 
-    tbody {
-
-        tr:nth-child(even) {
-            background-color: #ddd;
-        }
-
-        .car-image {
-            position: relative;
-            height: 120px;
-            width: 120px;
-
-            img {
-                width: 100%;
-                padding: 8px;
-            }
-
-        }
-
-        .car-date {
-            min-width: 100px;
-        }
-
-        .car-name {
-            padding: 0 10px;
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: black;
-            text-align: center;
-        }
-
-        .car-description {
-            font-style: italic;
-            color: #212121;
-            padding: 0 15px;
-            min-width: 350px;
-        }
-
-        .car-price {
-            padding: 0 15px;
-        }
-
-        .car-link {
-            text-align: center;
-            
-            button {
-                padding: 5px;
-                background-color: black;
-                border-radius: 3px;
-                cursor: pointer;
-                color: white;
-                margin: 0 2px;
-                border: 1px solid black;
-                transition: 0.6s;
-
-                &:hover {
-                    background-color: white;
-                    color: black;
-                    
-                }
-            }
-        }
+    tr:hover {
+      background: rgba(255, 255, 255, 0.06);
     }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .car-image {
+      position: relative;
+
+      width: 130px;
+      height: 110px;
+
+      padding: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+
+        padding: 0;
+      }
+    }
+
+    .car-date {
+      min-width: 100px;
+
+      color: rgba(255, 255, 255, 0.5);
+
+      font-size: 0.8rem;
+    }
+
+    .car-name {
+      padding: 0 14px;
+
+      font-size: 1rem;
+      font-weight: 500;
+
+      color: rgba(255, 255, 255, 0.9);
+
+      text-align: center;
+    }
+
+    .car-description {
+      min-width: 350px;
+
+      padding: 15px;
+
+      font-style: normal;
+
+      line-height: 1.5;
+
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .car-price {
+      padding: 0 15px;
+
+      color: rgba(255, 255, 255, 0.9);
+
+      font-weight: 500;
+    }
+
+    .car-link {
+      text-align: center;
+
+      button {
+        padding: 7px 10px;
+
+        margin: 0 3px;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 4px;
+
+        color: rgba(255, 255, 255, 0.82);
+
+        cursor: pointer;
+
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease,
+          transform 0.3s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.75);
+
+          color: #111;
+
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width < 768px) {
+
+  .car-table {
+    display: block;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+  }
+
+  .car-table tbody .car-description {
+    min-width: 280px;
+
+    white-space: normal;
+  }
+
+  .car-table tbody .car-image {
+    width: 110px;
+    height: 90px;
+  }
 }

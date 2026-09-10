@@ -7,7 +7,6 @@ export default function Register() {
             <div className="section-subtitle">Registrate para una mejor experiencia</div>
             <div className="form-container">
                 <div className="form-subcontainer">
-                    <h2 className="form-title">FORMULARIO REGISTRO</h2>
                     <form>
                         <div className="input-group">
                             <label className="input-label" htmlFor="nombreCompleto">

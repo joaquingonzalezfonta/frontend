@@ -5,14 +5,14 @@ export default function Footer() {
         <article className="footer-articles">
           <div className="feature-description">
             <a href="#" className="link-icons">
-              <i className="fa-solid fa-phone" /> 3456-471626
+              <i className="fa-solid fa-location-dot" /> Juncal 2600
             </a>
             <a href="#" className="link-icons">
-              <i className="fa-solid fa-location-dot" /> San Lorenzo 336 Este
+              <i className="fa-solid fa-phone" /> 1143988326
             </a>
             <a href="#" className="link-icons">
               <i className="fa-solid fa-envelope" />
-              imporcar@concordia.com.ar
+              imporcar@recoleta.com.ar
             </a>
           </div>
         </article>

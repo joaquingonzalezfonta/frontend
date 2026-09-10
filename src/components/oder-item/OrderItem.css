@@ -34,7 +34,7 @@
     }
 
     .item-actions button {
-        color: white;
+        color: #ffffff;
         padding: 4px;
         background-color: black;
         border: 1px solid black;
@@ -43,7 +43,7 @@
         transition: 0.6s;
 
         &:hover {
-            background-color: white;
+            background-color: #ffffff;
             border: 1px solid black;
             color: black;
         }

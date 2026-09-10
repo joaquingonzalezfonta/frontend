@@ -10,10 +10,9 @@
     .form-subcontainer {
         justify-content: center;
         max-width: 600px;
-        background-color: white;
-        color: white;
-        border: 3px solid black;
-        box-shadow: 0 0 15px 0 black;
+        background-color: #ffffff;
+        color: #ffffff;
+        padding-right: 10px;
 
 
 

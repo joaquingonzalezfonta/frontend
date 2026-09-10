@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom"
 import Contact from "./pages/contact/Contact"
 import Home from "./pages/home/Home"
 import Login from "./pages/login/Login"
-import Aboutus from "./pages/aboutus/Aboutus"
 import Register from "./pages/register/Register"
 import Adminproduct from "./pages/adminproduct/Adminproduct"
 import ProductDetail from "./pages/product-detail/ProductDetail"
@@ -31,8 +30,6 @@ export default function App() {
             <Route path="register" element={<Register />} />
 
             <Route path="contact" element={<Contact />} />
-
-            <Route path="aboutus" element={<Aboutus />} />
 
             <Route path="adminproduct" element={
               

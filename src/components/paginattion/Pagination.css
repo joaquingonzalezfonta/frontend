@@ -1,25 +1,61 @@
 .pagination-container {
-    gap: .5rem;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    .pagination-button {
-        margin-top: 15px;
-        width: 65px;
-        height: 40px;
-        border-radius: 3px;
-        background-color: white;
-        border: 1px solid black;
-        color: black;
-        cursor: pointer;
-        transition: 0.6s;
+  gap: 10px;
 
+  margin: 30px 0 20px;
+}
 
-        &:hover {
-            background-color: white;
-            border: 1px solid black;
-            color: black;
-        }
-    }
+.pagination-button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.pagination-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+
+  border-color: rgba(255, 255, 255, 0.35);
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+.pagination-button:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.pagination-button.active {
+  background: rgba(255, 255, 255, 0.8);
+
+  border-color: rgba(255, 255, 255, 0.8);
+
+  color: #111;
+
+  font-weight: 600;
 }

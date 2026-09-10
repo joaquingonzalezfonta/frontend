@@ -14,7 +14,6 @@ export default function Contact() {
 
             <div className="form-container">
                 <div className="form-subcontainer">
-                    <h2 className="form-title">FORMULARIO CONTACTO</h2>
                     <form>
                         <div className="input-group">
                             <label htmlFor="fullname" className="input-label">Nombre completo</label>

@@ -1,120 +1,242 @@
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgb(0, 0, 0, 0.5);
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 50;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+
+  background: rgba(0, 0, 0, 0.72);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  opacity: 0;
+
+  animation: showIn 0.3s ease-in-out forwards;
+
+
+  .modal-content {
+    width: calc(100% - 2rem);
+    max-width: 600px;
+    max-height: 500px;
+
+    padding: 1.5rem;
+
+    overflow: hidden;
+
+    background: rgba(15, 15, 18, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+
     opacity: 0;
-    transition: opacity .3s ease-in-out;
-    animation: showIn 1s ease-in-out forwards;
 
-    .modal-content {
-        max-height: 500px;
-        background-color: white;
-        border: 2px solid black;
-        padding: 1rem;
-        color: black;
-        border-radius: .25rem;
-        box-shadow: 0 0 10px #287275;
-        width: calc(100% - 2rem);
-        max-width: 600px;
-        opacity: 0;
-        transition: opacity .3s ease-in-out;
-        animation: fadeIn .3s ease-in-out forwards;
+    animation: fadeIn 0.3s ease-in-out forwards;
 
-        .modal-header {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            justify-content: center;
-        }
-        
-        .modal-body {
-            margin-bottom: 1rem;
-            overflow-y: scroll;
 
-            .order-list {
-                display: flex;
-                flex-direction: column;
-                list-style: none;
-                
+    .modal-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-                
-                
-                .order-item {
-                    padding: .25rem 1rem;
-                    
-                    &:not(:last-child) {
-                        border-bottom: 1px solid rgba(95, 158, 160, 0.338);
-                    }
-                }
-                
-                .order-total{
-                    padding: 5px;
-                    text-align: right;
-                    background-color: rgba(95, 158, 160, 0.338);
-                }
-            }
+      margin-bottom: 1rem;
 
-        }
+      padding-bottom: 1rem;
 
-        .modal-footer {
-            
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
-            .btn-order {
-            padding: 3px;
-            background-color: black;
-            color: white;
-            border: 1px solid black;
-            border-radius: 5px;
-            margin-left: 5px;
-            transition: 0.6s;
-            
+      font-size: 1.4rem;
+      font-weight: 500;
 
-            &:hover {
-                background-color: white;
-                border: 1px solid black;
-                color: black;
-            }
-        }
-        }
+      letter-spacing: 0.04em;
 
-        
+      color: rgba(255, 255, 255, 0.95);
     }
+
+
+    .modal-body {
+      max-height: 300px;
+
+      margin-bottom: 1rem;
+
+      overflow-y: auto;
+
+      padding-right: 6px;
+
+
+      .order-list {
+        display: flex;
+        flex-direction: column;
+
+        gap: 0;
+
+        list-style: none;
+
+
+        .order-item {
+          padding: 0.75rem 1rem;
+
+          color: rgba(255, 255, 255, 0.68);
+
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          }
+        }
+
+
+        .order-total {
+          margin-top: 10px;
+
+          padding: 12px;
+
+          text-align: right;
+
+          background: rgba(255, 255, 255, 0.06);
+
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 5px;
+
+          color: rgba(255, 255, 255, 0.95);
+
+          font-weight: 600;
+        }
+      }
+    }
+
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      gap: 8px;
+
+      padding-top: 1rem;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+
+      .btn-order {
+        padding: 9px 14px;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 5px;
+
+        color: rgba(255, 255, 255, 0.85);
+
+        cursor: pointer;
+
+        font-size: 12px;
+        font-weight: 600;
+
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease,
+          transform 0.3s ease,
+          border-color 0.3s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.78);
+
+          border-color: rgba(255, 255, 255, 0.78);
+
+          color: #111;
+
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 @keyframes showIn {
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @media screen and (width < 670px) {
 
-    .modal-content {
-        
-        .modal-body {
-            justify-content: center;
-        }
+  .modal-overlay {
+    padding: 0.75rem;
+  }
 
-        .modal-footer {
+  .modal-overlay .modal-content {
+    width: 100%;
+    max-height: 85vh;
 
-            justify-content: center;
-        }
+    padding: 1rem;
+
+
+    .modal-header {
+      font-size: 1.2rem;
     }
 
-    
-    
+
+    .modal-body {
+      max-height: 55vh;
+    }
+
+
+    .modal-footer {
+      justify-content: center;
+
+      flex-wrap: wrap;
+    }
+  }
 }
 

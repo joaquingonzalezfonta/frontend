@@ -41,11 +41,6 @@ export default function Header() {
                                 CONTACT
                             </NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink to='/Aboutus' className="nav-link">
-                                ABOUT US
-                            </NavLink>
-                        </li>
 
                         {
                             user?.role === "admin" &&

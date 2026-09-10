@@ -160,12 +160,11 @@ export default function Adminproduct() {
 
     return (
         <section className='form-section'>
-            <h1 className="section-title"> Registro </h1>
-            <div className="section-subtitle">Registrate para una mejor experiencia</div>
+            <h1 className="section-title"> ADMIN PRODUCT </h1>
+            <div className="section-subtitle">Registra los datos de un nuevo producto</div>
             <div className="admin-container">
                 <div className="form-container-center">
                     <div className="form-subcontainer">
-                        <h2 className='form-title'> ADMIN PRODUCT </h2>
                         <form onSubmit={handleSubmit(onProductSubmit)} id='productForm'>
                             <div className="input-group">
                                 <label htmlFor="name"> Nombre producto </label>
