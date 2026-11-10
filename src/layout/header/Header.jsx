@@ -78,11 +78,11 @@ export default function Header() {
             </div>
             <div className="user-info">
 
-                <a className="user-name" href="/Adminuser">
+                <NavLink className="user-name" to="/adminuser">
                     <div>
                         { user?.name || "NO USER" }
                     </div>
-                </a>
+                </NavLink>
                     
 
                 <div className="carrito">
