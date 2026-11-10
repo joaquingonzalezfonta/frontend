@@ -13,7 +13,7 @@ export default function Home() {
       <section className="product-section">
         <h1 className="section-title"> IMPORCAR </h1>
         <span className="section-subtitle">
-          vehículos deprtivos disponibles
+          vehículos deportivos disponibles
         </span>
 
         <ProductGallery />
