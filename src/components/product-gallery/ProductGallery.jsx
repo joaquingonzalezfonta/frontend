@@ -12,12 +12,16 @@ export default function ProductGallery() {
     const [ products, setProducts ] = useState([]);
     const [ limit, setLimit ] = useState(6);
     const [ total, setTotal ] = useState(0);
+    const [loading, setLoading] = useState(true);
+    const [loadError, setLoadError] = useState(false);
 
     const { logout } = useUser()
 
     useEffect(() => { getProducts() }, [limit])
 
     async function getProducts(skip = 0) {
+        setLoading(true);
+        setLoadError(false);
         try {
             
             const response = await axios.get(`${URL}/products?skip=${skip}&limit=${limit}`)
@@ -28,7 +32,8 @@ export default function ProductGallery() {
 
         } catch (error) {
 
-            if(error.response.status === 401) {
+            setLoadError(true);
+            if(error.response?.status === 401) {
                 alert("Usuario no autorizado");
                 logout();
                 return;
@@ -36,23 +41,28 @@ export default function ProductGallery() {
 
             alert("Error al obtener productos");
             console.log(error);
+        } finally {
+            setLoading(false);
         }
 
     }
 
     return (
-        <section>
-            <div className="product-card-container">
+        <section aria-busy={loading}>
+            {loading && <p className='loading-products' role="status">Cargando productos…</p>}
+            {!loading && loadError && <p role="alert">No se pudieron cargar los productos. Intentá nuevamente.</p>}
+            {!loading && !loadError && products.length === 0 && <p>No hay productos disponibles.</p>}
+            <div className="product-card-container" hidden={loading || loadError}>
             {
-                products.map(producto => (<ProductCard key={producto._id} prod={producto} />
+                !loading && !loadError && products.map(producto => (<ProductCard key={producto._id} prod={producto} />
                 ))
             }
         </div>
 
-            <Pagination total={total} limit={limit} getFn={getProducts}/>
+            <Pagination total={total} limit={limit} getFn={getProducts} disabled={loading}/>
             
             <div className='selectPaginationContainer'>
-                <select className='selectPagination' onChange={(evt) => setLimit(Number(evt.target.value))}>
+                <select className='selectPagination' value={limit} disabled={loading} onChange={(evt) => setLimit(Number(evt.target.value))}>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

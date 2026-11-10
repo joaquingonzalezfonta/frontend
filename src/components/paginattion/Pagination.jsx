@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Pagination.css";
 
-export default function Pagination({ total, limit, getFn }) {
+export default function Pagination({ total, limit, getFn, disabled = false }) {
   const [currentPage, setCurrentPage] = useState(0);
 
   const btns = Math.ceil(total / limit);
@@ -12,6 +12,7 @@ export default function Pagination({ total, limit, getFn }) {
     btnArray.push(
       <button
         key={i}
+        disabled={disabled}
         className={`pagination-button ${
           currentPage === i ? "active" : ""
         }`}
